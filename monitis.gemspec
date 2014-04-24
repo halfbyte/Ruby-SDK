@@ -10,4 +10,8 @@ Gem::Specification.new do |s|
   s.files       += Dir["example/*.rb"]
   s.require_paths = ['lib']
   s.homepage    = 'https://rubygems.org/gems/example'
+  
+  s.add_runtime_dependency 'httparty'
+  s.add_runtime_dependency 'crack'
+  
 end
