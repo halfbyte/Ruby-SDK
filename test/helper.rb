@@ -7,12 +7,13 @@ rescue Bundler::BundlerError => e
   $stderr.puts "Run `bundle install` to install missing gems"
   exit e.status_code
 end
-require 'test/unit'
+require 'minitest/autorun'
+require 'minitest/unit'
 require 'shoulda'
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'monitis-SDK'
 
-class Test::Unit::TestCase
+class Test::Unit::TestCase < Minitest::Test
 end
